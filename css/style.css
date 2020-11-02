@@ -121,7 +121,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	align-content: center;
 }
 .content-area-rule-items-introduction {
@@ -138,8 +138,9 @@ body {
 	color: rgba(51,153,255,1);
 }
 .content-area-rule-text{
-	margin: 0px 35px;
+	display: block;
 	width: 100%;
+	margin: 0px 35px;
 	font-size: 25px;
 	font-weight: bold;
 }

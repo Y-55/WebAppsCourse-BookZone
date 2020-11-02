@@ -1,0 +1,367 @@
+/*tags selectors*/
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+}
+body {
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto auto;
+	margin: 0px;
+/*---------------------------------header------------------------------*/
+}
+.header {
+	grid-row:1;
+	grid-column:1;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto ;
+	align-content: start;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 10px rgba(96,96,96,0.5);
+}
+/*header top*/
+.header-top{
+	grid-row:1;
+	grid-column:1;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	align-content: center;
+	border-bottom: 1px solid rgba(51,153,255,0.4);
+}
+.header-logo {
+	display: inline-block;
+	padding: 5px 20px;
+}
+.header-logo h1{
+	font-size: 35px;
+	color: rgba(51,153,255,1);
+	display: inline;
+}
+.header-logo span{
+	font-size: 45px;
+	color: rgba(70,70,70,1);
+}
+/*header down*/
+.header-down {
+	grid-row:2;
+	grid-column:1;
+	background-color: rgba(51,153,255,1); 
+}
+/*header down menue*/
+.header-menue {
+	display: inline-block;
+}
+.header-menue ul {
+}
+.header-menue li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px 10px 10px 10px;
+	margin: 0px 10px;
+	color: rgba(255,255,255,1);
+	font-size: 18px;
+}
+.header-menue li a {
+	font-weight: bold;
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+	padding: 7px 0px;
+}
+/*css for the current link style other than the rest of links.*/
+#header-menue-current {
+	border-bottom: 4px solid rgba(255,255,255,1);
+}
+.header-menue li a:hover{
+	border-bottom: 4px solid rgba(255,255,255,1);
+	border-radius: 1px;
+}
+/*account icon*/
+.header-down-account-icon {
+	float: right;
+	padding: 0px 15px 0px 0px;
+}
+.header-down-account-icon p {
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 18px;
+	color: white;
+}
+.header-down-account-icon a {
+	padding: 8px;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 18px;
+	color: white;
+}
+.header-down-account-icon a:hover {
+	border-bottom: 4px solid rgba(255,255,255,1);
+	border-radius: 1px;
+}
+.header-down-account-icon i {
+	margin-top: 6px;
+	font-size: 30px;
+	color: white;
+
+}
+/*---------------------------------content-area------------------------------*/
+/*the entire container*/
+.content-area {
+	grid-row:2;
+	grid-column:1;
+	margin: 20px 50px;
+}
+.content-area-rule-items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+	margin: auto;
+}
+.content-area-rule-items-introduction {
+	color: rgba(51,153,255,1);
+	font-size: 30px;
+	margin: 20px 20px 60px 20px;
+}
+.content-area-rule-text{
+	font-size: 25px;
+	font-weight: bold;
+	margin: 0px 10px;
+}
+.content-area-rule-items ul {
+	margin-bottom: 50px;
+}
+.content-area-rule-items li{
+	box-shadow: 0px 0px 10px rgba(96,96,96,0.5);
+	padding: 3px;
+	margin: 10px 10px 10px 10px;
+	width: 250px;
+	height: 450px;
+	display: inline-block;
+	border: solid 2px  rgba(70,70,70,0.2);
+	border-radius: 3px;
+}
+.content-area-rule-items li:hover {
+	border: solid 2px  rgba(70,70,70,1);
+}
+.content-area-rule-items-image {
+	height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.content-area-rule-items-namebar p {
+	text-align: center;
+	font-weight: bold;
+	height: 40px;
+	margin: 5px 0px;
+}
+.content-area-rule-items-price p {
+	margin: 10px;
+	text-align: center;
+	font-weight: bold;
+	color: red;
+	font-size: 20px
+}
+.content-rule-area-items-buylink div{
+	font-weight: bold;
+	margin: auto;
+	background-color: rgba(51,153,255,1);
+	display: block;
+	width: 120px;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+.content-rule-area-items-pageLink {
+	margin: 0px 10px;
+}
+.content-rule-area-items-pageLink a {
+	color: red;
+	font-size: 18px;
+	font-weight: bold;
+}
+/*----------------------------------feedback page styles------------------------*/
+.content-area-2 {
+	margin: 20px 50px 30px 50px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.content-area-formdiv {
+	border: solid 2px  rgba(70,70,70,0.2);
+	border-radius: 3px;
+	display: inline-block;
+	padding: 30px 40px;
+	background-color: rgba(51,153,255,1); 
+	box-shadow: 0px 0px 10px rgba(96,96,96,0.5);
+}
+.content-area-formdiv label {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+.content-area-formdiv input, textarea, select {
+	border: none;
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0px 20px 0px;
+	font-size: 20px;
+	border-radius: 3px;
+	box-shadow: 0px 0px 10px rgba(96,96,96,0.5);
+
+}
+.content-area-formdiv input:focus, textarea:focus, select:focus {
+	outline-color: rgba(51,153,255,1);  
+}
+.content-area-formdiv input[type='submit'] {
+	color: rgba(51,153,255,1);
+	cursor: pointer;
+	font-weight: bold;
+	background-color: white;
+}
+
+/*recommendations URLs*/
+.r1 {
+	background-image: url(../images/mags/book2.jpg);
+}
+.r2 {
+	background-image: url(../images/mags/book3.jpg);
+}
+.r3 {
+	background-image: url(../images/textBooks/book1.jpg);
+}
+.r4 {
+	background-image: url(../images/books/book1.jpg);
+}
+.r5 {
+	background-image: url(../images/textBooks/book5.jpg);
+}
+/*books URLs*/
+.b1 {
+	background-image: url(../images/books/book1.jpg);
+}
+.b2 {
+	background-image: url(../images/books/book2.jpg);
+}
+.b3 {
+	background-image: url(../images/books/book3.jpg);
+}
+.b4 {
+	background-image: url(../images/books/book4.jpg);
+}
+.b5 {
+	background-image: url(../images/books/book5.jpg);
+}
+/*mags URLs*/
+.m1 {
+	background-image: url(../images/mags/book1.jpg);
+}
+.m2 {
+	background-image: url(../images/mags/book2.jpg);
+}
+.m3 {
+	background-image: url(../images/mags/book3.jpg);
+}
+.m4 {
+	background-image: url(../images/mags/book4.jpg);
+}
+.m5 {
+	background-image: url(../images/mags/book5.jpg);
+}
+/*textBooks URLs*/
+.t1 {
+	background-image: url(../images/textBooks/book1.jpg);
+}
+.t2 {
+	background-image: url(../images/textBooks/book2.jpg);
+}
+.t3 {
+	background-image: url(../images/textBooks/book3.jpg);
+}
+.t4 {
+	background-image: url(../images/textBooks/book4.jpg);
+}
+.t5 {
+	background-image: url(../images/textBooks/book5.jpg);
+}
+/*---------------------------------footer-----------------------------------*/
+.footer {
+	display: grid;
+	grid-row:3;
+	grid-column:1;
+	background-color: white;
+	align-content: start;
+	background-color: black;
+}
+/*footer top*/
+.footer-information {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-around;
+	align-content: center;
+}
+/*boxes*/
+.footer-information-Box-discription {
+	font-weight: bold;
+	margin-bottom: 5px;
+	font-size: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	color: white;
+}
+.footer-information-Box {
+	margin: 15px 0px 0px 0px;
+}
+.footer-information-Box ul{
+	list-style-type: none;
+	justify-content: center;
+}
+.footer-information-Box ul li{
+	margin-bottom: 5px;
+}
+.footer-information-Box ul span {
+	color: white;
+	font-size: 18px;
+}
+.footer-information-Box ul i{
+	color: white;
+	font-size: 25px;
+}
+/*header down*/
+.footer-copyright {
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	margin: 5px 5px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+.footer-copyright p {
+	padding-top: 15px;
+	color: rgb(255,255,255);
+}
+/*-------------------------------------the css for phone screens---------------*/
+@media screen and (max-width: 750px) {
+	.footer-information {
+	    grid-template-columns: auto;
+    }
+    .header-menue{
+	    display: block;
+    }
+    .header-menue li {
+	    display: block;
+    }
+    .header-down-account-icon {
+		float: left;
+	}
+	.header-down-account-icon i{
+		display: none;
+	}
+}

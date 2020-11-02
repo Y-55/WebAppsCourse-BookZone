@@ -138,9 +138,10 @@ body {
 	color: rgba(51,153,255,1);
 }
 .content-area-rule-text{
+	margin: 0px 35px;
+	width: 100%;
 	font-size: 25px;
 	font-weight: bold;
-	margin: 0px 10px;
 }
 .content-area-rule-items ul {
 	margin-bottom: 50px;
@@ -177,7 +178,7 @@ body {
 	color: red;
 	font-size: 20px
 }
-.content-rule-area-items-buylink div{
+.content-rule-area-items-buylink{
 	font-weight: bold;
 	margin: auto;
 	background-color: rgba(51,153,255,1);
@@ -188,10 +189,10 @@ body {
 	color: white;
 }
 .content-rule-area-items-pageLink a {
-	margin: 0px 5px;
 	color: red;
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: bold;
+	width: 100%;
 }
 /*----------------------------------feedback page styles------------------------*/
 .content-area-2 {

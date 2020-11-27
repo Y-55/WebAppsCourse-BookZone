@@ -24,16 +24,10 @@ function validateFeedBack() {
 	}
 
 	//------email validate------
-	if(document.getElementById('email').value == '') {
-
-		document.getElementsByClassName("errEmail")[1].style.display = 'inline-block';
-		valid = false;
-	}
-	else if (document.getElementById('email').value.search(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == 0){
+	if (document.getElementById('email').value.search(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) == 0){
 		document.getElementsByClassName("errEmail")[0].style.display = 'none';
 	}
 	else {
-		document.getElementsByClassName("errEmail")[1].style.display = 'none';
 		document.getElementsByClassName("errEmail")[0].style.display = 'inline-block';
 		valid = false;
 	}

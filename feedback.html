@@ -6,13 +6,17 @@
 	<link href="css/style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="description" content="an online Book store website">
-    <meta name="keywords" content="HTML, CSS">
+	<meta name="keywords" content="HTML, CSS">
 	<meta name='auther' content='YusufAbdulwahab'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<!-- The width=device-width part sets the width of the page to follow the screen-width of the device
 		The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
 	<script src="https://kit.fontawesome.com/a530ce494c.js" crossorigin="anonymous"></script>
 	<!--this is the source of all icons used in this website-->
+	<script src='scripts/script.js'></script>
+	<!--this is the source of java scrpt code-->
+	<script src="scripts/script.js"></script>
+	<!--this is the source of java scrpt code-->
 </head>
 
 <body class="grid-body">
@@ -29,7 +33,6 @@
 				<!--the menue list-->
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<!--header-menue-current calss for menu option with different style other than the rest of links-->
 					<li><a href="books.html">Books</a></li>
 					<li><a href="mags.html">Magazines</a></li>
 					<li><a href="textbooks.html">TextBooks</a></li>
@@ -40,8 +43,24 @@
 				<i class="fas fa-user-circle"></i>
 			</div>
 			<div class='header-down-account-icon'>
-				<a href="">SignIn</a>
-				<p>/</p> <a href="">SignUp</a>
+				<span id="SignIn" onclick="signInButton();">SignIn</span>
+				<p>/</p>
+				<span>SignUp</span>
+				<div id="header-down-account-icon-signInID" class="header-down-account-icon-signIn">
+					<form action="process" method="POST" onsubmit="return validateLogin();">
+						<label>User Name</label><br />
+						<div id='errName'>error: the name is empty</div>
+						<input onblur="whenBlur(this);" onfocus='whenFocus(this);' id='login-name' name='username'
+							type='text' placeholder="username"><br />
+						<label>Password</label><br />
+						<div id='errPass'>error: the password is empty</div>
+						<input onblur="whenBlur(this);" onfocus='whenFocus(this);' id='login-pass' name='password'
+							type='password' placeholder='password'><br />
+						<label id='header-down-account-icon-signIn-label'><input type='checkbox'><span>remember
+								me</span></label>
+						<input  type='submit' value='submit'>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -49,13 +68,19 @@
 	<div class='content-area-2'>
 		<div class='content-area-formdiv'>
 			<!--the feed back form-->
-			<form action="index.html">
+			<form action="index.html" method='post' onsubmit='return validateFeedBack();'>
 				<label>Full Name</label><br />
-				<input type='text' placeholder="FullName"><br />
+				<div class='errName2'>error: digits are not allowed</div>
+				<div class='errName2'>error: this field is required</div>
+				<input onblur="whenBlur(this);" onfocus='whenFocus(this);' id='name' name='name' type='text' placeholder="FullName" onkeyup='validateNameFeedBack();'><br />
 				<label>Email Address</label><br />
-				<input type='text' placeholder="EmailAddress"><br />
+				<div class="errEmail">error: provide a correct Email Address</div>
+				<div class="errEmail">error: this field is required</div>
+				<input onblur="whenBlur(this);" onfocus='whenFocus(this)' id='email' name='email' type='text'
+					placeholder="EmailAddress"><br />
 				<label>Subject</label><br />
-				<select>
+				<div id="errSubject">error: select a subject</div>
+				<select onblur="whenBlur(this);" onfocus='whenFocus(this);' id='subject-menu' name='subject'>
 					<option>select a subject</option>
 					<option>suggestion</option>
 					<option>complaint</option>
@@ -63,7 +88,9 @@
 					<option>help</option>
 					<option>other</option>
 				</select><br />
-				<textarea rows='10' cols='50' placeholder="write your text here"></textarea><br />
+				<div id="errTextarea">error: this field is required</div>
+				<textarea onblur="whenBlur(this);" onfocus='whenFocus(this);' id='input-field' rows='10' cols='50'
+					placeholder="write your text here"></textarea><br />
 				<input type='submit' value="submet">
 			</form>
 		</div>

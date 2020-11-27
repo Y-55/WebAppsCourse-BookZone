@@ -6,16 +6,16 @@
 	<link href="css/style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 	<meta name="description" content="an online Book store website">
-    <meta name="keywords" content="HTML, CSS">
+	<meta name="keywords" content="HTML, CSS">
 	<meta name='auther' content='YusufAbdulwahab'>
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<!-- The width=device-width part sets the width of the page to follow the screen-width of the device
 		The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
 	<script src="https://kit.fontawesome.com/a530ce494c.js" crossorigin="anonymous"></script>
 	<!--this is the source of all icons used in this website-->
+	<script src="scripts/script.js"></script>
+	<!--this is the source of java scrpt code-->
 </head>
-
-<body class="grid-body">
 	<div class='header'>
 		<div class='header-top'>
 			<div class='header-logo'>
@@ -29,7 +29,6 @@
 				<!--the menue list-->
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<!--header-menue-current calss for menu option with different style other than the rest of links-->
 					<li><a href="books.html" id='header-menue-current'>Books</a></li>
 					<li><a href="mags.html">Magazines</a></li>
 					<li><a href="textbooks.html">TextBooks</a></li>
@@ -40,8 +39,24 @@
 				<i class="fas fa-user-circle"></i>
 			</div>
 			<div class='header-down-account-icon'>
-				<a href="">SignIn</a>
-				<p>/</p> <a href="">SignUp</a>
+				<span id="SignIn" onclick="signInButton();">SignIn</span>
+				<p>/</p>
+				<span>SignUp</span>
+				<div id="header-down-account-icon-signInID" class="header-down-account-icon-signIn">
+					<form action="process" method="POST" onsubmit="return validateLogin();">
+						<label>User Name</label><br />
+						<div id='errName'>error: the name is empty</div>
+						<input onblur="whenBlur(this);" onfocus='whenFocus(this);' id='login-name' name='username'
+							type='text' placeholder="username"><br />
+						<label>Password</label><br />
+						<div id='errPass'>error: the password is empty</div>
+						<input onblur="whenBlur(this);" onfocus='whenFocus(this);' id='login-pass' name='password'
+							type='password' placeholder='password'><br />
+						<label id='header-down-account-icon-signIn-label'><input type='checkbox'><span>remember
+								me</span></label>
+						<input  type='submit' value='submit'>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
